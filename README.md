@@ -1,14 +1,8 @@
 # ORB LETTERS
 
-<p align="center">
-  <strong>A living editorial field built with Three.js, GLSL, workers, and Pretext.</strong>
-</p>
+A living editorial field built with Three.js, GLSL, workers, and Pretext.
 
-<p align="center">
-  Text does not sit on the page here. It drifts, wraps, compresses, and breathes around moving bodies.
-</p>
-
----
+Text does not sit on the page here. It drifts, wraps, compresses, and breathes around moving bodies.
 
 ## What It Is
 
@@ -17,8 +11,6 @@ Orb Letters is a real-time kinetic typography piece where text becomes atmospher
 Three motion orbs act like invisible gravity wells. The paragraph engine continuously reflows copy around them while a particle layer turns language into a luminous field of glyphs. The result sits somewhere between an editorial cover, a generative poster, and a calm sci-fi instrument panel.
 
 This version is intentionally clean: dark by default, minimal UI, and visually driven by motion instead of decorative clutter.
-
----
 
 ## Features
 
@@ -30,15 +22,11 @@ This version is intentionally clean: dark by default, minimal UI, and visually d
 - Live text editing, shuffle, reset, and intensity controls
 - GitHub Pages-ready static deployment
 
----
-
 ## Visual Language
 
 - `Still`: restrained movement, soft bloom, editorial calm
 - `Tide`: balanced motion, continuous drift, readable tension
 - `Nova`: brighter pulses, stronger displacement, higher cinematic energy
-
----
 
 ## Stack
 
@@ -49,23 +37,12 @@ This version is intentionally clean: dark by default, minimal UI, and visually d
 - `Web Workers`
 - `Vite`
 
----
-
 ## Architecture
 
-```mermaid
-flowchart LR
-  A[UI Controls] --> B[App Runtime]
-  B --> C[Pretext Layout Engine]
-  B --> D[Three.js Renderer]
-  B --> E[Post FX Composer]
-  B --> F[Simulation Worker]
-  F --> B
-  D --> G[Instanced Glyph Particles]
-  B --> H[Orb Interaction Layer]
-```
-
----
+- UI controls drive the app runtime
+- The runtime uses Pretext for layout and Three.js for rendering
+- A simulation worker updates orb and particle motion off the main thread
+- Post-processing adds bloom, chromatic aberration, and film grain
 
 ## Local Run
 
@@ -81,31 +58,26 @@ npm run build
 npm run preview
 ```
 
----
-
 ## Controls
 
-- `?? / ??` toggles theme
-- `?` opens the control panel
+- Theme toggle switches between dark and light
+- Menu button opens the control panel
 - Drag an orb to reposition it
 - Click an orb to freeze or unfreeze only that orb
 - Edit the text and press `Apply`
 - Use `Shuffle` to remix the copy instantly
 
----
-
 ## Deploying
 
-A GitHub Pages workflow is included at [`/.github/workflows/deploy.yml`](./.github/workflows/deploy.yml).
+A GitHub Pages workflow is included at `/.github/workflows/deploy.yml`.
 
-Once this repo is on GitHub:
+Once GitHub Pages is enabled with `GitHub Actions` as the source, pushes to `main` will build and deploy the contents of `dist/` automatically.
 
-1. Open the repository settings.
-2. Enable GitHub Pages with `GitHub Actions` as the source.
-3. Push to `main`.
-4. The workflow will build and deploy the contents of `dist/` automatically.
+Expected Pages URL:
 
----
+```text
+https://shivampawaskar.github.io/NEW/
+```
 
 ## Project Structure
 
@@ -124,8 +96,6 @@ public/
 index.html
 vite.config.js
 ```
-
----
 
 ## Why It Feels Different
 
