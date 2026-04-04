@@ -1,57 +1,36 @@
-# ORB LETTERS
+# Orb Letters
 
-A living editorial field built with Three.js, GLSL, workers, and Pretext.
+Orb Letters is a real-time typography experiment built with Three.js, GLSL, workers, and Pretext.
 
-Text does not sit on the page here. It drifts, wraps, compresses, and breathes around moving bodies.
-
-## What It Is
-
-Orb Letters is a real-time kinetic typography piece where text becomes atmosphere.
-
-Three motion orbs act like invisible gravity wells. The paragraph engine continuously reflows copy around them while a particle layer turns language into a luminous field of glyphs. The result sits somewhere between an editorial cover, a generative poster, and a calm sci-fi instrument panel.
-
-This version is intentionally clean: dark by default, minimal UI, and visually driven by motion instead of decorative clutter.
+Text flows around moving orbs while a particle layer turns letters into a living field.
 
 ## Features
 
-- Real-time text reflow around moving circular bodies
-- GPU-instanced glyph particles with custom GLSL shading
-- Worker-driven motion field for smooth orb and particle simulation
-- Dark-mode-first presentation with light-mode toggle
-- Scene modes: `Still`, `Tide`, and `Nova`
+- Real-time text wrapping around moving circles
+- GPU glyph particles with custom shaders
+- Worker-driven motion simulation
+- Dark and light theme toggle
+- Three scene modes: Still, Tide, and Nova
 - Live text editing, shuffle, reset, and intensity controls
-- GitHub Pages-ready static deployment
-
-## Visual Language
-
-- `Still`: restrained movement, soft bloom, editorial calm
-- `Tide`: balanced motion, continuous drift, readable tension
-- `Nova`: brighter pulses, stronger displacement, higher cinematic energy
+- GitHub Pages deployment workflow included
 
 ## Stack
 
-- `Three.js`
-- `GLSL`
-- `@chenglou/pretext`
-- `GSAP`
-- `Web Workers`
-- `Vite`
+- Three.js
+- GLSL
+- Pretext
+- GSAP
+- Web Workers
+- Vite
 
-## Architecture
-
-- UI controls drive the app runtime
-- The runtime uses Pretext for layout and Three.js for rendering
-- A simulation worker updates orb and particle motion off the main thread
-- Post-processing adds bloom, chromatic aberration, and film grain
-
-## Local Run
+## Run Locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-Production build:
+Build for production:
 
 ```bash
 npm run build
@@ -60,18 +39,20 @@ npm run preview
 
 ## Controls
 
-- Theme toggle switches between dark and light
-- Menu button opens the control panel
-- Drag an orb to reposition it
-- Click an orb to freeze or unfreeze only that orb
-- Edit the text and press `Apply`
-- Use `Shuffle` to remix the copy instantly
+- Toggle theme
+- Open the controls panel
+- Drag an orb to move it
+- Click an orb to freeze or unfreeze it
+- Edit the text and apply changes
+- Shuffle the text instantly
 
-## Deploying
+## Deployment
 
-A GitHub Pages workflow is included at `/.github/workflows/deploy.yml`.
+GitHub Pages workflow file:
 
-Once GitHub Pages is enabled with `GitHub Actions` as the source, pushes to `main` will build and deploy the contents of `dist/` automatically.
+```text
+.github/workflows/deploy.yml
+```
 
 Expected Pages URL:
 
@@ -96,11 +77,3 @@ public/
 index.html
 vite.config.js
 ```
-
-## Why It Feels Different
-
-Most interactive text demos treat type as decoration.
-
-Orb Letters treats text like matter.
-
-The letters are the scene. The layout is always negotiating with motion. The particles do not simply decorate the copy; they echo it, stretch it, and turn it into an ambient field.
