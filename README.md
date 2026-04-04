@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  Text doesn't sit on the page here. It drifts, wraps, compresses, and breathes around moving bodies.
+  Text does not sit on the page here. It drifts, wraps, compresses, and breathes around moving bodies.
 </p>
 
 ---
@@ -98,7 +98,7 @@ npm run preview
 
 A GitHub Pages workflow is included at [`/.github/workflows/deploy.yml`](./.github/workflows/deploy.yml).
 
-Once this repo is pushed to GitHub:
+Once this repo is on GitHub:
 
 1. Open the repository settings.
 2. Enable GitHub Pages with `GitHub Actions` as the source.
@@ -133,12 +133,4 @@ Most interactive text demos treat type as decoration.
 
 Orb Letters treats text like matter.
 
-The letters are the scene. The layout is always negotiating with motion. The particles don't simply decorate the copy; they echo it, stretch it, and turn it into an ambient field.
-
----
-
-## Status
-
-Repo-ready.
-Deployment-ready.
-Waiting for GitHub connection so it can be pushed live.
+The letters are the scene. The layout is always negotiating with motion. The particles do not simply decorate the copy; they echo it, stretch it, and turn it into an ambient field.
