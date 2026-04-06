@@ -9,7 +9,7 @@
 
 Orb Letters is a real-time interactive visual piece built with Three.js, GLSL shaders, Web Workers, and Pretext. Instead of treating text like static content, it turns language into a living surface that wraps around moving orbital forms while a glyph-particle layer creates depth, energy, and motion.
 
-## Why It Stands Out ab
+## Why It Stands Out a
 
 - Text is always in motion and continuously reflows around moving orbs
 - Letters exist both as readable copy and as a glowing particle field
